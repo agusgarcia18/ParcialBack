@@ -10,7 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface PersonaRepository extends org.springframework.data.jpa.repository.JpaRepository<Persona, Long> {
+public interface PersonaRepository extends BaseRepository<Persona, Long> {
 
     //Anotacion del Metodo Query
     List<Persona> findByNombreContainingOrApellidoContaining(String nombre, String apellido);
